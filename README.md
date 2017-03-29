@@ -19,12 +19,12 @@ app.pre = (req, res, type) => {
 };
 
 app.error = (exception, req, res) => {
-    res.say(`I'm sorry, I encountered an error: ${exception.toString()}.`});
+    res.say(`I'm sorry, I encountered an error: ${exception.toString()}.}`);
 };
 
-app.launch = (req, res) => {
+app.launch((req, res) => {
     res.say('Greetings, Program!');
-};
+});
 
 const queryDataFromRemote = () => {
     return new Promise((resolve, reject) => {
