@@ -52,4 +52,5 @@ const intents = {
 };
 
 app = intentGenerator(app, intents);
+module.exports = app;
 ```
