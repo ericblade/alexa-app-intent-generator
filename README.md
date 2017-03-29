@@ -2,12 +2,13 @@
 
 Simplified intent generation for the node alexa-app lib
 
-This combines alexa-app and alexa-utterances into a more powerful library.
+This combines [alexa-app](https://github.com/alexa-js/alexa-app) and [alexa-utterances](https://github.com/alexa-js/alexa-utterances) into a more powerful library.
 
 Please read the documentation for those libraries.  I'll update this README more soon.
 
-Example:
+# Example:
 
+```javascript
 const AlexaApp = require('alexa-app');
 const intentGenerator = require('alexa-app-intent-generator');
 
@@ -49,3 +50,4 @@ const intents = {
 };
 
 app = intentGenerator(app, intents);
+```
