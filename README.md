@@ -19,11 +19,11 @@ app.pre = (req, res, type) => {
 };
 
 app.error = (exception, req, res) => {
-    response.say(`I'm sorry, I encountered an error: ${exception.toString()}.`});
+    res.say(`I'm sorry, I encountered an error: ${exception.toString()}.`});
 };
 
 app.launch = (req, res) => {
-    response.say('Greetings, Program!');
+    res.say('Greetings, Program!');
 };
 
 const queryDataFromRemote = () => {
@@ -37,9 +37,9 @@ const intents = {
     queryData: {
         action: (req, res) => {
             return queryDataFromRemote().then((data) => {
-                response.say(`Received data ${data}`);
+                res.say(`Received data ${data}`);
             }).catch((err) => {
-                response.say(`I'm sorry, I was unable to retrieve the data, because ${JSON.stringify(err)}.`);
+                res.say(`I'm sorry, I was unable to retrieve the data, because ${JSON.stringify(err)}.`);
             })
         },
         dictionary: {
