@@ -1,0 +1,31 @@
+{
+  "name": "alexa-app-intent-generator",
+  "version": "0.5.0",
+  "description": "Simplified intent generation for the node alexa-app lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericblade/alexa-app-intent-generator.git"
+  },
+  "keywords": [
+    "alexa",
+    "alexa-app",
+    "avs",
+    "amazon",
+    "alexa-skill",
+    "intents",
+    "utterances"
+  ],
+  "author": "Eric Blade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericblade/alexa-app-intent-generator/issues"
+  },
+  "homepage": "https://github.com/ericblade/alexa-app-intent-generator#readme",
+  "dependencies": {
+    "alexa-utterances": "^0.2.1"
+  }
+}

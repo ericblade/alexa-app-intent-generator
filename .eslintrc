@@ -1,0 +1,21 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "indent": [ "error", 4, { "SwitchCase": 1 } ],
+        "linebreak-style": 0,
+        "max-len": [
+            "warn",
+            {
+                "code": 100,
+                "comments": 120,
+                "ignoreTrailingComments": true,
+                "ignoreUrls": true
+            }
+        ],
+        "import/named": [ 2 ],
+        "import/no-unresolved": [ 0 ]
+    }
+}
