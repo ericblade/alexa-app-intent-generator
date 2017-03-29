@@ -36,7 +36,9 @@ const queryDataFromRemote = () => {
 const intents = {
     queryData: {
         action: (req, res) => {
-            return queryDataFromRemote().catch((err) => {
+            return queryDataFromRemote().then((data) => {
+                response.say(`Received data ${data}`);
+            }).catch((err) => {
                 response.say(`I'm sorry, I was unable to retrieve the data, because ${JSON.stringify(err)}.`);
             })
         },
