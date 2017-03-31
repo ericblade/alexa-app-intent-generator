@@ -1,8 +1,9 @@
 # alexa-app-intent-generator
 
-Simplified intent generation for the node alexa-app lib
+Simplified intent generation for the node alexa-app lib.
 
-This combines [alexa-app](https://github.com/alexa-js/alexa-app) and [alexa-utterances](https://github.com/alexa-js/alexa-utterances) into a more powerful library.
+Adds individual intent dictionary, as well as a more declarative syntax for the entire
+intent generation process.
 
 Please read the documentation for those libraries.  I'll update this README more soon.
 
