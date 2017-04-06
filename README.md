@@ -5,7 +5,11 @@ Simplified intent generation for the node alexa-app lib.
 Adds individual intent dictionary, as well as a more declarative syntax for the entire
 intent generation process.
 
-Please read the documentation for those libraries.  I'll update this README more soon.
+Adds session (alexa-app request.getSession()) as third parameter to all intent calls.
+For applications that use session, you're going to need it in probably every intent, so
+might as well eliminate the boilerplate associated with it.
+
+Please read the documentation for those libraries.
 
 # Example:
 
