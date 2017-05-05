@@ -1,5 +1,5 @@
 module.exports = (app, intentsObj) => {
-    const origDictionary = app.dictionary ? Object.assign({}, app.dictionary) : {};
+    const newApp = app;
 
     Object.keys(intentsObj).forEach((intentName) => {
         const intent = intentsObj[intentName];
@@ -12,22 +12,20 @@ module.exports = (app, intentsObj) => {
             action(req, res, session);
         };
 
-        // while alexa-app does provide a dictionary function, it is app wide,
-        // but I see it being also useful, declaratively, on a per-intent basis,
-        // so this mutates the app dictionary on a per-intent basis allowing a
-        // dictionary object for each intent, as well as the app wide dictionary.
+        // i want to declare the dictionary on a per-intent basis, as well as per-app.
+        // The app will use the entire dictionary anyway, but it seems cleaner to have
+        // a dictionary that is only used in a particular intent defined at that intent
+        // in the declarative intent section.
+
         if (intent.dictionary) {
-            app.dictionary = Object.assign({}, origDictionary, intent.dictionary);
+            newApp.dictionary = Object.assign({}, app.dictionary, intent.dictionary);
             delete intent.dictionary;
         }
 
         delete intent.action;
 
-        app.intent(intentName, intent, actionWithSession());
-
-        // restore the dictionary to it's original status before moving on
-        app.dictionary = origDictionary;
+        newApp.intent(intentName, intent, actionWithSession());
     });
 
-    return app;
+    return newApp;
 };
