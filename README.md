@@ -1,5 +1,7 @@
 # alexa-app-intent-generator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ericblade/alexa-app-intent-generator.svg)](https://greenkeeper.io/)
+
 Simplified intent generation for the node alexa-app lib.
 
 Adds individual intent dictionary, as well as a more declarative syntax for the entire
